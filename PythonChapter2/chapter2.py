@@ -1,4 +1,6 @@
-# LAB 1
+# CHAPTER 2.1
+
+# LAB 1 
 print("Hello,World!")
 print("Phil")
 # error: print(Phil)
@@ -44,3 +46,9 @@ print("      *     *      "*2)
 print("      *     *      "*2)
 print("      *     *      "*2)
 print("      *******      "*2)
+
+
+# CHAPTER 2.2
+
+# LAB 1
+print("\"I'm\"\n\"\"learning\"\"\n\"\"\"Python\"\"\"")
