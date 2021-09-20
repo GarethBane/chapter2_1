@@ -53,10 +53,6 @@
     # LAB 1
         print("\"I'm\"\n\"\"learning\"\"\n\"\"\"Python\"\"\"")
 
-############################### CHAPTER 2.3
-
-    # Nil LAB
-
 ############################### CHAPTER 2.4
 
     # LAB 1: VARIABLES
@@ -65,8 +61,7 @@
         mary = 5 
         adam = 6
 
-        # Cant use + to join opposing literal ie integer + string. However using a comma in in this scenario produces the desired outcome.
-        print(john, ",", mary, ",", adam)
+        print(john, mary, adam, sep=", ")
 
         total_apples = john + mary + adam
 
@@ -101,7 +96,6 @@
         x = float(x)
         y = 3 * x ** 3 - 2 * x ** 2 + 3 * x - 1
         print("y =", y)
-
 
 
 ############################### CHAPTER 2.5
