@@ -47,7 +47,6 @@
         print("      *     *      "*2)
         print("      *******      "*2)
 
-
 ############################### CHAPTER 2.2
 
     # LAB 1
@@ -97,7 +96,6 @@
         y = 3 * x ** 3 - 2 * x ** 2 + 3 * x - 1
         print("y =", y)
 
-
 ############################### CHAPTER 2.5
 
     # LAB 1: Comments
@@ -115,7 +113,6 @@
 
         #here we should also print "Goodbye", but a programmer didn't have time to write any code
         #this is the end of the program that computes the number of seconds in 3 hour
-
 
     # After editing
 
