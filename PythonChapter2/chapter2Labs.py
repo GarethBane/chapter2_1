@@ -126,3 +126,35 @@
         print("Hours:", hours) #printing the number of hours
         print("Seconds in Hours:", hours * seconds) # printing the number of seconds in a given number of hours
         print("Goodbye")
+
+############################### CHAPTER 2.6
+
+    # LAB 2.6.1.9: Simple input and output
+
+        a = float(input("Enter a number above zero: ")) # This will take a users input (string) and convert it to a float type
+        b = float(input("Enter another number above zero: "))
+
+        print("Addition:",a+b) 
+        print("Subtraction:",a-b) 
+        print("Multiplication:",a*b) 
+        print("Division:",a/b) 
+        print("\nThat's all, folks!")
+
+    # LAB 2.6.1.10 Operators and expressions
+
+        x = float(input("Enter value for x: "))
+        y = 1./(x + 1./(x + 1./(x + 1./x)))
+        print("y =", y)
+
+    # LAB 2.6.1.11 Operators and expressions
+
+        hour = int(input("Starting time (hours): "))
+        mins = int(input("Starting time (minutes): "))
+        dura = int(input("Event duration (minutes): "))
+
+        mins += dura # Find total minutes
+        hour += mins // 60 # We are adding start hour to total mins (Start mins + duration) and dividing by 60 
+        mins %= 60 # This will convert the total mins into a traditional 59 mins format
+        hour %= 24 # This will turn the previous calculated hours in a 24hr format
+        print("The event finishes at:", str(hour)+":"+ str(mins))
+
