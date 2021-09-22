@@ -21,7 +21,7 @@ if income < 85528:
     tax = income * .18 - 556.02
 else:
     tax = (income - 85528) * .32 + 14839.02
-    
+
 if tax <= 0:
     tax = 0.0
 
@@ -44,3 +44,91 @@ if year >= 1582:
         print("Leap year")
 else:
     print("Not within the Gregorian calendar period")
+
+############################### CHAPTER 3.2
+
+    # LAB: 3.2.1.3 Essentials of the while loop - Guess the secret number
+    secret_number = 777
+
+    print(
+    """
+    +================================+
+    | Welcome to my game, muggle!    |
+    | Enter an integer number        |
+    | and guess what number I've     |
+    | picked for you.                |
+    | So, what is the secret number? |
+    +================================+
+    """)
+
+    user_num = int(input("Have a guess, enter a number: "))
+
+    while user_num != secret_number:
+        user_num = int(input("Ha ha! You're stuck in my loop!......guess again: "))
+    print("Correct!",user_num,"is the magic number.","Well done, muggle! You are free now.")
+
+    # LAB: 3.2.1.6 Essentials of the for loop - counting mississippily
+    import time # Imports a module called time to use (call) the sleep() function
+
+    for count in range(1,6):
+        print(count,"Mississippi")
+        time.sleep(1) # Will output the print statement at 1 interval seconds
+    print("Ready or not, here I come!")
+
+    # LAB: 3.2.1.9 The break statement - Stuck in a loop
+    # The while will keeping looping round until the correct word is inputted, which then it will break (jump out of the while loop)
+    while True: 
+        user_guess = input("What is the magic word?...")
+        if user_guess == "chupacabra":
+            break
+    print("You've successfully left the loop.")
+
+    # LAB: 3.2.1.11 The continue statement - the Pretty Vowel Eater
+    word_without_vowels = ""
+
+    # Prompt the user to enter a word and assign it to the user_word variable.
+    user_word = input("Enter a word: ")
+    user_word = user_word.upper() # This converts the user word to uppercase
+    # Checks each letter in turn to see if it matches one the vowels 
+    # If it matches it skips and move to the next letter.
+    for letter in user_word:
+        if letter == "A":
+            continue
+        elif letter == "E":
+            continue
+        elif letter == "I":
+            continue
+        elif letter == "O":
+            continue
+        elif letter == "U":
+            continue
+        else:
+            word_without_vowels += letter # Any letters not a vowel will be concatenated to this variable
+    # Print the word assigned to word_without_vowels.
+    print(word_without_vowels)
+
+    # LAB: 3.2.1.14 Essentials of the while loop
+    blocks = int(input("Enter the number of blocks: "))
+    height = 0
+
+    while blocks > 0:
+        height += 1
+        blocks -= height
+        if blocks <= height:
+            break
+    print("The height of the pyramid:", height)
+
+    # LAB: 3.2.1.15 Collatz's hypothesis
+    c0 = int(input("Enter any non-negative and non-zero integer number: "))
+    steps = 0
+
+    while c0 != 1:
+        steps += 1
+        if c0 % 2 == 0:
+            c0 //= 2
+            print(c0)
+        else:
+            c0 = 3 * c0 + 1
+            print(c0)
+    print("Steps =", steps)
+
