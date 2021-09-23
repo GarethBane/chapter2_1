@@ -131,4 +131,3 @@ else:
             c0 = 3 * c0 + 1
             print(c0)
     print("Steps =", steps)
-
