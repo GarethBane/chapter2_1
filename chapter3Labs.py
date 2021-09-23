@@ -145,28 +145,28 @@ else:
     print(hat_list)
 
     # LAB: 3.4.1.13 The basics of lists - the Beatles
-    # step 1
-    beatles = []
+    # step 1 - Creates a list
+    beatles = [] 
     print("Step 1:", beatles)
 
-    # step 2
+    # step 2 - Adds new entry to list
     beatles.append("John Lennon")
     beatles.append("Paul McCartney")
     beatles.append("George Harrison")
     print("Step 2:", beatles)
 
-    # step 3
+    # step 3 - Prompts the user to add the below values to the list
     for i in range(1):
         beatles.append(input("Please add the following band member\nStu Sutcliffe: "))
         beatles.append(input("Please add the following band member\nPete Best: "))
     print("Step 3:", beatles)
 
-    # step 4
+    # step 4 - Removes the last two entries from the list
     del beatles[-1]
     del beatles[-1]
     print("Step 4:", beatles)
 
-    # step 5
+    # step 5 - Add a new value to new but in the first position(Left most)
     beatles.insert(0, "Ringo Starr")
     print("Step 5:", beatles)
 
