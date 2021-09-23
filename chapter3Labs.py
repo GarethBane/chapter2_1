@@ -190,3 +190,14 @@ else:
     print("The list with unique elements only:")
     print(my_list)
 
+    # An alternative method but using the values instead of the indices
+    my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+    my_unique_list = []
+
+    for i in my_list:
+        if i not in my_unique_list:
+            my_unique_list.append(i)
+    my_list = my_unique_list[:]
+            
+    print("The list with unique elements only:")
+    print(my_list)
