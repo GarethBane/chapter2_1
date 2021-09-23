@@ -132,7 +132,7 @@ else:
             print(c0)
     print("Steps =", steps)
 
- # LAB: 3.4.1.6 The basics of lists
+    # LAB: 3.4.1.6 The basics of lists
     hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in the hat.
 
     # Step 1: write a line of code that prompts the user
@@ -150,18 +150,43 @@ else:
     print("Step 1:", beatles)
 
     # step 2
-    beatles.append["John Lennon", "Paul McCartney", "George Harrison"]
+    beatles.append("John Lennon")
+    beatles.append("Paul McCartney")
+    beatles.append("George Harrison")
     print("Step 2:", beatles)
 
     # step 3
+    for i in range(1):
+        beatles.append(input("Please add the following band member\nStu Sutcliffe: "))
+        beatles.append(input("Please add the following band member\nPete Best: "))
     print("Step 3:", beatles)
 
     # step 4
+    del beatles[-1]
+    del beatles[-1]
     print("Step 4:", beatles)
 
     # step 5
+    beatles.insert(0, "Ringo Starr")
     print("Step 5:", beatles)
-
 
     # testing list legth
     print("The Fab", len(beatles))
+
+    # LAB: 3.6.1.9 Operating with lists - basics
+    # This labs iterates through a list and filters out repeated values.
+    # It does so by comparing x list to y list(y is an empty list)
+    # If a value in x is not in y it will add it to y
+    # y should now only have unique values
+    # On completion of the loop x will copy the values from y and print x with the unique values
+    my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+    my_unique_list = []
+
+    for i in range(len(my_list)):
+        if my_list[i] not in my_unique_list:
+            my_unique_list.append(my_list[i])
+    my_list = my_unique_list[:]
+        
+    print("The list with unique elements only:")
+    print(my_list)
+
