@@ -5,29 +5,34 @@
 #As you can see, there are multiple ways to do this. The only requirement is that you get it working
 #However, if you want to challenge yourself, get it working in as little lines of code as possible
 
-tttBoard = []
 
-#put code here to create your board using lists within lists. Populate each of the 9 spaces on 
-#the board with a "_"
+print(
+    """
+    +================================+
+    |   Welcome to my game of....    |
+    |         TIC-TAC-TOE            |
+    +================================+
+    """)
+# Create a multi-dimensional list and set the game to "True"
+board = [[" ","1","2","3"],["1","_","_","_"],["2","_","_","_"],["3","_","_","_"]] 
+game = True
 
-
-#Minimum exercise
-
-#output the list to the screen
-
-#put some code in which changes one of the 9 spaces to a "o"
+while game: # Whilst the game is True (as set above) continue the loop
+    print(" ***** Board *****") 
+    for i in board: # Outputs a 2D board created by the list above (board)
+        print(i)
     
+    row_select = int(input("\nPlease select a row #: ")) # Prompts user to select a row and store input as an integer
+    while row_select < 1 or row_select > 3: # Checks user input is valid, if not prompt user to enter a valid number 
+        row_select = int(input("Please select a valid row between (1-3): "))
+    col_select = int(input("Please select a column #: "))
+    while col_select < 1 or col_select > 3:
+        col_select = int(input("Please select a valid column between (1-3): "))
+    player_choice = input("Please choose, x, o, or q to quit: ")
 
-
-#Extension Exercise
-
-#If you are feeling like a ninja, 
-#Create a suitable loop which will be known as the "Game Loop"
-#At the start of each iteration, the board will be printed to the screen
-#Then, take the following inputs from the user during each iteration: column, row, o or x
-#This should allow a simple verion of the game
- 
-
-
-
-
+    # Checks the input from player_choice, if "q" end game, else store the value in the list
+    if player_choice == "q": 
+        print("\nThanks for playing!","\nGoodbye" )
+        game = False
+    else: 
+        board[row_select][col_select] = player_choice 
