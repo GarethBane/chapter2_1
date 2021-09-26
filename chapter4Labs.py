@@ -34,8 +34,7 @@ def is_year_leap(year):
         
 def days_in_month(year, month):
     days = [0,31,28,31,30,31,30,31,31,30,31,30,31] # An extra element was added at the start of the list "0", so the remaining elements aligns to the correct number of months (1-12)
-    is_leap = is_year_leap(year) # Checks if the submitted year is a leap year or not 
-    if is_leap == True and month == 2: # If its a leap year and the month is feb return 29 days
+    if is_year_leap(year) and month == 2: # Checks if year is a leap year and the month is feb and return 29 days
         return 29
     else: # Else return the correct number of days from the list, using the month relating to the list index.
         return days[month]
@@ -53,3 +52,39 @@ for i in range(len(test_years)):
 		print("OK")
 	else:
 		print("Failed")
+
+
+
+
+def is_year_leap(year):
+    if year >= 1582:
+        if year % 4 != 0:
+            return False
+        elif year % 100 != 0:
+            return True
+        elif year % 400 != 0:
+            return False
+        else:
+            return True
+    else:
+        return False
+
+def days_in_month(year, month):
+    days = [0,31,28,31,30,31,30,31,31,30,31,30,31] 
+        is_leap = is_year_leap(year) 
+        if is_leap == True and month == 2: 
+            return 29
+        else: 
+            return days[month]
+
+def day_of_year(year, month, day):
+    off_set_months_leap = [0, 0, 3, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6]
+    off_set_months_common = [0, 0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5]
+    c = year / 100
+    y = year % 100
+    d = (1 + 5((y - 1) % 4) + 3 (y - 1) + 5 (c % 4 )) % 7
+    if is_leap 
+    
+    return d + 
+
+print(day_of_year(2000, 12, 31))
