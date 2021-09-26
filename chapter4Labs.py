@@ -1,7 +1,6 @@
 ############################### CHAPTER 4.3
 
 # LAB: 4.3.1.6 A leap year: writing your own functions
-
 # This function takes an argument (year) and check if its a leap year or not
 # If its a leap year it will return True else it will return False
 def is_year_leap(year):
@@ -34,12 +33,12 @@ def is_year_leap(year):
         return False
         
 def days_in_month(year, month):
-    months = [0,31,28,31,30,31,30,31,31,30,31,30,31] # An extra element was added at the start of the list "0", so the remaining elements aligns to the correct number of months (1-12)
+    days = [0,31,28,31,30,31,30,31,31,30,31,30,31] # An extra element was added at the start of the list "0", so the remaining elements aligns to the correct number of months (1-12)
     is_leap = is_year_leap(year) # Checks if the submitted year is a leap year or not 
     if is_leap == True and month == 2: # If its a leap year and the month is feb return 29 days
         return 29
     else: # Else return the correct number of days from the list, using the month relating to the list index.
-        return months[month]
+        return days[month]
            
 # The below code simply check the above function are outputting the correct results.    
 test_years = [1900, 2000, 2016, 1987]
