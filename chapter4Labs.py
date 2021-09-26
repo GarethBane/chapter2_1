@@ -71,20 +71,12 @@ def is_year_leap(year):
 
 def days_in_month(year, month):
     days = [0,31,28,31,30,31,30,31,31,30,31,30,31] 
-        is_leap = is_year_leap(year) 
-        if is_leap == True and month == 2: 
-            return 29
-        else: 
-            return days[month]
+    if is_year_leap(year) and month == 2: 
+        return 29
+    else: 
+        return days[month]
 
 def day_of_year(year, month, day):
-    off_set_months_leap = [0, 0, 3, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6]
-    off_set_months_common = [0, 0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5]
-    c = year / 100
-    y = year % 100
-    d = (1 + 5((y - 1) % 4) + 3 (y - 1) + 5 (c % 4 )) % 7
-    if is_leap 
     
-    return d + 
 
 print(day_of_year(2000, 12, 31))
