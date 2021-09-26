@@ -91,3 +91,20 @@ print(day_of_year(2000, 3, 1))
 print(day_of_year(2001, 3, 1))
 print(day_of_year(2000, 3, 31))
 print(day_of_year(1999, 3, 31))
+
+# LAB: 4.3.1.9 Prime numbers - how to find them
+# This lab takes a number and checks if it is a prime number or not
+def is_prime(num):
+    is_num_prime = True # Create a variable to store true or false
+    for x in range(2, num): # Iterates through nth times checking if num mod (%) equals 0, if yes its not prime so is_num_prime becomes False, start of range is 2 and finishes one before num so not to check itself.
+        if num % x == 0:
+            is_num_prime = False
+            break # If false jump out of code and return value
+        else: # If num can not be divided equal its prime, return True
+            is_num_prime = True
+    return is_num_prime 
+
+for i in range(1, 20):
+	if is_prime(i + 1):
+			print(i + 1, end=" ")
+print()
