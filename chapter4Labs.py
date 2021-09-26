@@ -53,9 +53,9 @@ for i in range(len(test_years)):
 	else:
 		print("Failed")
 
-
-
-
+# LAB: 4.3.1.8 Day of the year: writing and using your own functions
+# This lab build upon the previous two, the function takes three arguments and returns the total days in a year for a given year, month, day
+# If the arguments value do not meet the requirements it will return a "none"
 def is_year_leap(year):
     if year >= 1582:
         if year % 4 != 0:
@@ -77,6 +77,17 @@ def days_in_month(year, month):
         return days[month]
 
 def day_of_year(year, month, day):
-    
+    if year < 1582 or month < 1 or month > 12 or day < 1 or day > 31: # Validates input if false return none
+        return 
+    days_sum = 0
+    for x in range(month): # Takes month as a range for number of iteration, for this loop it will call the function X amount of times
+        days_sum += days_in_month(year, x) # For each iteration add the value to the previous value to produce a total sum (days)
+    return days_sum + day # Add the specified days from the user to the days_sum and return the result
 
-print(day_of_year(2000, 12, 31))
+# A few test case
+print(day_of_year(2000, 12, 1))
+print(day_of_year(1999, 12, 1))
+print(day_of_year(2000, 3, 1))
+print(day_of_year(2001, 3, 1))
+print(day_of_year(2000, 3, 31))
+print(day_of_year(1999, 3, 31))
