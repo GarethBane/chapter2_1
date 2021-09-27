@@ -108,3 +108,26 @@ for i in range(1, 20):
 	if is_prime(i + 1):
 			print(i + 1, end=" ")
 print()
+
+# LAB: 4.3.1.10 Converting fuel consumption
+def liters_100km_to_miles_gallon(liters):
+    a = 100000 / 1609.344 # Converts 100km into miles
+    b = 1 / 3.785411784   # Converts 1 liter into gallons
+    c = liters * b        # Calculates liters used in gallons
+    mpg = a / c           # Calculates miles per gallons (MPG)
+    return mpg
+
+def miles_gallon_to_liters_100km(miles):
+    a = 100000 / 1609.344 # Converts 100km into miles
+    b = 1 / 3.785411784   # Converts 1 liter into gallons
+    c = a / miles         # Calculates miles per litres 
+    litre_100km = c / b   # Calculates litres/100Km
+    return litre_100km
+    
+print(liters_100km_to_miles_gallon(3.9))
+print(liters_100km_to_miles_gallon(7.5))
+print(liters_100km_to_miles_gallon(10.))
+print(miles_gallon_to_liters_100km(60.3))
+print(miles_gallon_to_liters_100km(31.4))
+print(miles_gallon_to_liters_100km(23.5))
+
