@@ -131,3 +131,78 @@ print(miles_gallon_to_liters_100km(60.3))
 print(miles_gallon_to_liters_100km(31.4))
 print(miles_gallon_to_liters_100km(23.5))
 
+# ############################### END OF LABS ################################
+# Below examples are for references only:
+
+# This will create a dictionary with inputted data from the user, (name:score)
+# And add the end will print out the user name and its average score
+school_class = {}
+
+while True:
+    name = input("Enter the student's name: ")
+    if name == '':
+        break
+    
+    score = int(input("Enter the student's score (0-10): "))
+    if score not in range(0, 11):
+	    break
+    
+    if name in school_class:
+        school_class[name] += (score,)
+    else:
+        school_class[name] = (score,)
+        
+for name in sorted(school_class.keys()):
+    adding = 0
+    counter = 0
+    for score in school_class[name]:
+        adding += score
+        counter += 1
+    print(name, ":", adding / counter)
+
+# You can also create a tuple using a Python built-in function called tuple(). 
+# This is particularly useful when you want to convert a certain iterable (e.g., a list, range, string, etc.) to a tuple:
+# Note: you can do the same for list using list()
+
+my_tuple = tuple((1, 2, "string"))
+print(my_tuple)
+
+my_list = [2, 4, 6]
+print(my_list)    # outputs: [2, 4, 6]
+print(type(my_list))    # outputs: <class 'list'>
+
+tup = tuple(my_list)
+print(tup)    # outputs: (2, 4, 6)
+print(type(tup))    # outputs: <class 'tuple'>
+
+# If you want to loop through a dictionary's keys and values, you can use the items() method, e.g.:
+pol_eng_dictionary = {
+    "zamek": "castle",
+    "woda": "water",
+    "gleba": "soil"
+    }
+
+for key, value in pol_eng_dictionary.items():
+    print("Pol/Eng ->", key, ":", value)
+
+# To check if a given key exists in a dictionary, you can use the in keyword:
+pol_eng_dictionary = {
+    "zamek": "castle",
+    "woda": "water",
+    "gleba": "soil"
+    }
+
+if "zamek" in pol_eng_dictionary:
+    print("Yes")
+else:
+    print("No")
+
+# To combine 2+ dictionaries in to 1:
+d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
+d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d3 = {}
+
+for item in (d1, d2):
+    d3.update(item)
+
+print(d3)

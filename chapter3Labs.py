@@ -201,3 +201,12 @@ else:
             
     print("The list with unique elements only:")
     print(my_list)
+
+    # #################################### END OF LABS ###############################
+    # Below are examples of coded used during chapter for future references
+
+    # This is a shorthand version to creating a 2D list
+    temps = [[0.0 for h in range(24)] for d in range(31)]
+
+    # This is a shorthand version to creating a 3D list
+    rooms = [[[False for r in range(20)] for f in range(15)] for t in range(3)]
